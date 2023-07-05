@@ -24,6 +24,13 @@
   --spacing-9: 40px;
   --spacing-10: 48px;
 
+  --icon-size-0: 24px;
+  --icon-size-1: 32px;
+  --icon-size-2: 40px;
+
+  --icon-weight-normal: 500;
+  --icon-weight-bold: 700;
+
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
@@ -36,14 +43,35 @@
   --background-color: #2E2D36;
   --ground-color: #242424;
   --foreground-color: rgba(255, 249, 243, 0.72);
+  --foreground-reverse-color: #F5F5F5;
 }
 
 .light-mode {
   --background-color: #FFF9F3;
   --ground-color: #242424;
   --foreground-color: rgba(36, 36, 36, 0.72);
+  --foreground-reverse-color: #F5F5F5;
 }
 
 body {
+  color: var(--foreground-color);
   background: var(--background-color);
+}
+
+i.symbol {
+  font-family: var(--font-family-symbols);
+  font-weight: var(--icon-weight-normal);
+  font-style: normal;
+  font-size: var(--icon-size-0);
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
 }

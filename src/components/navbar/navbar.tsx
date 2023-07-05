@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import SwitchThemeModeButton from '@/components/shared/switch-theme-mode-button'
 import { profileImage, profileName, profileOffice } from '@/data/profile'
 import styles from './navbar.module.css'
 
@@ -17,6 +18,10 @@ const Navbar: React.FC = () => {
           <span className={styles['profile-name']}>{profileName}</span>
           <span className={styles['profile-label']}>{profileOffice}</span>
         </div>
+      </div>
+      <div className={styles['buttons-container']}>
+        <SwitchThemeModeButton />
+        <button className={styles['sidebar-toggle-button']}></button>
       </div>
     </nav>
   )

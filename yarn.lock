@@ -1699,6 +1699,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+material-symbols@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/material-symbols/-/material-symbols-0.9.0.tgz#e794993cc2f8af26cd67bb4c9d1e599f06e90b50"
+  integrity sha512-6A0dRrZLDGQ3ag0V46WECmpj1KzY9qtZvd3yNwsTtG9I+qaobLEPbW7Z3uCw5mgnxR3XUklH1hXKmRgaSrB7fg==
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"

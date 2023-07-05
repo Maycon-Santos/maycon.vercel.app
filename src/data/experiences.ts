@@ -1,10 +1,10 @@
-import codezoneLogoImage from '@/assets/experiences/codezone.jpg'
-import hurbLogoImage from '@/assets/experiences/hurb.jpg'
-import olimpiadaDoConhecimentoImage from '@/assets/experiences/olimpiada-do-conhecimento.png'
+import codezoneLogoImage from '@/assets/images/experiences/codezone.jpg'
+import hurbLogoImage from '@/assets/images/experiences/hurb.jpg'
+import olimpiadaDoConhecimentoImage from '@/assets/images/experiences/olimpiada-do-conhecimento.png'
 
-import Olimpiada1Image from '@/assets/experiences/olimpiada-1.jpg'
-import Olimpiada2Image from '@/assets/experiences/olimpiada-2.jpg'
-import Olimpiada3Image from '@/assets/experiences/olimpiada-3.png'
+import Olimpiada1Image from '@/assets/images/experiences/olimpiada-1.jpg'
+import Olimpiada2Image from '@/assets/images/experiences/olimpiada-2.jpg'
+import Olimpiada3Image from '@/assets/images/experiences/olimpiada-3.png'
 
 export const experiences = [
   {

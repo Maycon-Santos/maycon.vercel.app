@@ -9,11 +9,10 @@ import React, {
   useState,
 } from 'react'
 
-type MatchFn = (matches: {
-  [k in keyof ThemeMode]: boolean | string | number
-}) => boolean | string | number
-
 export type ThemeMode = 'dark' | 'light'
+
+type MatchFn = (matches: { [k in ThemeMode]: boolean | string | number }) => any
+
 type ThemeModeContextValue = {
   themeMode: ThemeMode
   match: MatchFn
@@ -31,7 +30,7 @@ const ThemeModeProvider: React.FC<PropsWithChildren> = (props) => {
   const [themeMode, setThemeMode] = useState<ThemeMode>('light')
   const match = useCallback<MatchFn>(
     (matches) =>
-      Object.entries(matches).find(([key]) => key === themeMode)?.[1] || false,
+      Object.entries(matches).find(([key]) => key === themeMode)?.[1],
     [themeMode],
   )
 

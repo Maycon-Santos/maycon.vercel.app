@@ -1,8 +1,8 @@
-import snakeGameImage from '@/assets/projects/snake-game.jpg'
-import enevaImage from '@/assets/projects/eneva.jpg'
-import cortevaImage from '@/assets/projects/corteva.jpg'
-import risqueImage from '@/assets/projects/risque.jpg'
-import infograficoANPImage from '@/assets/projects/infografico-anp.png'
+import snakeGameImage from '@/assets/images/projects/snake-game.jpg'
+import enevaImage from '@/assets/images/projects/eneva.jpg'
+import cortevaImage from '@/assets/images/projects/corteva.jpg'
+import risqueImage from '@/assets/images/projects/risque.jpg'
+import infograficoANPImage from '@/assets/images/projects/infografico-anp.png'
 
 export const projects = [
   {
