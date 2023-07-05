@@ -1,7 +1,12 @@
+import { Ubuntu } from 'next/font/google'
+import classNames from 'classnames'
+import ThemeModeProvider from '@/components/shared/theme-mode/theme-mode'
 import '../styles/global.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt">
+      <body className={classNames(ubuntu.className, 'light-mode')}>
+        <ThemeModeProvider>{children}</ThemeModeProvider>
+      </body>
     </html>
   )
 }

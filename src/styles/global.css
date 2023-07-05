@@ -23,40 +23,27 @@
   --spacing-8: 36px;
   --spacing-9: 40px;
   --spacing-10: 48px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --primary-color: #FFBA00;
+  --secondary-color: #9C26DF;
+  --tertiary-color: #2E2D36;
 }
 
 .dark-mode {
-  --background: #282a36;
-  --background-dark: #21222c;
-  --current-line: #44475a;
-  --selection: #2a2b37;
-  --foreground: #f8f8f2;
-  --comment: #6272a4;
-  --cyan: #8be9fd;
-  --green: #50fa7b;
-  --orange: #ffb86c;
-  --pink: #ff79c6;
-  --purple: #bd93f9;
-  --red: #ff5555;
-  --yellow: #f1fa8c;
+  --background-color: #2E2D36;
+  --ground-color: #242424;
+  --foreground-color: rgba(255, 249, 243, 0.72);
 }
 
 .light-mode {
-  --background: #ECEEF5;
-  --background-dark: #CDD1DD;
-  --current-line: #A7AAB6;
-  --selection: #ABAFBC;
-  --foreground: #0F0F0F;
-  --comment: #6272a4;
-  --cyan: #22798B;
-  --green: #50fa7b;
-  --orange: #eb8314;
-  --pink: #b32476;
-  --purple: #bd93f9;
-  --red: #ff5555;
-  --yellow: #f1fa8c;
+  --background-color: #FFF9F3;
+  --ground-color: #242424;
+  --foreground-color: rgba(36, 36, 36, 0.72);
 }
 
 body {
-  background: var(--background-dark);
+  background: var(--background-color);
 }
