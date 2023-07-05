@@ -1,0 +1,62 @@
+@import './reset.css';
+
+:root {
+  --font-size-0: 10px;
+  --font-size-1: 12px;
+  --font-size-2: 14px;
+  --font-size-3: 16px;
+  --font-size-4: 20px;
+  --font-size-5: 24px;
+  --font-size-6: 32px;
+  --font-size-7: 36px;
+  --font-size-8: 40px;
+  --font-size-9: 48px;
+
+  --spacing-0: 4px;
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 20px;
+  --spacing-5: 24px;
+  --spacing-6: 28px;
+  --spacing-7: 32px;
+  --spacing-8: 36px;
+  --spacing-9: 40px;
+  --spacing-10: 48px;
+}
+
+.dark-mode {
+  --background: #282a36;
+  --background-dark: #21222c;
+  --current-line: #44475a;
+  --selection: #2a2b37;
+  --foreground: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+}
+
+.light-mode {
+  --background: #ECEEF5;
+  --background-dark: #CDD1DD;
+  --current-line: #A7AAB6;
+  --selection: #ABAFBC;
+  --foreground: #0F0F0F;
+  --comment: #6272a4;
+  --cyan: #22798B;
+  --green: #50fa7b;
+  --orange: #eb8314;
+  --pink: #b32476;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+}
+
+body {
+  background: var(--background-dark);
+}
