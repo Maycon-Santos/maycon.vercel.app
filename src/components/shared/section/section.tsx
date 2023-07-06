@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from 'react'
 import styles from './section.module.css'
 
 interface SectionComponent extends React.FC<PropsWithChildren<SectionProps>> {
-  Heading: React.FC<SectionHeadingProps>
+  Header: React.FC<SectionHeadingProps>
   Title: React.FC<SectionTitleProps>
   Body: React.FC<SectionBodyProps>
 }
@@ -20,7 +20,7 @@ type SectionHeadingProps = PropsWithChildren<{
 type SectionTitleProps = {
   children: string
   fragmentStyles?: ('fill' | 'outline')[]
-  fragmentSizes?: ('medium' | 'large')[]
+  fragmentSizes?: ('medium' | 'sm-large' | 'large')[]
   fragmentTextTransforms?: (
     | 'uppercase'
     | 'lowercase'
@@ -49,10 +49,10 @@ const Section: SectionComponent = (props) => {
   )
 }
 
-const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
+const SectionHeader: React.FC<SectionHeadingProps> = (props) => {
   const { children, align = 'left' } = props
   return (
-    <div className={classNames(styles.heading, styles[`align-${align}`])}>
+    <div className={classNames(styles.header, styles[`align-${align}`])}>
       {children}
     </div>
   )
@@ -112,7 +112,7 @@ const SectionBody: React.FC<SectionBodyProps> = (props) => {
 }
 
 Section.Title = SectionTitle
-Section.Heading = SectionHeading
+Section.Header = SectionHeader
 Section.Body = SectionBody
 
 export default Section

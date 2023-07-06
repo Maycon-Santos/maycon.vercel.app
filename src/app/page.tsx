@@ -6,6 +6,7 @@ import SocialButtons from '@/components/social-buttons'
 import ProfileAside from '@/components/profile-aside'
 import Section from '@/components/shared/section'
 import SkillCards from '@/components/skill-cards'
+import Education from '@/components/education'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
       <Navbar onOpenAside={() => setAsideIsOpen(true)} />
       <main className={styles.main}>
         <Section>
-          <Section.Heading>
+          <Section.Header>
             <Section.Title
               fragmentSizes={['large']}
               fragmentStyles={['outline']}
@@ -26,7 +27,7 @@ export default function Home() {
             <Section.Title fragmentSizes={['medium']} fragmentStyles={['fill']}>
               Bem-vindo(a)!
             </Section.Title>
-          </Section.Heading>
+          </Section.Header>
           <Section.Body>
             Sou um desenvolvedor fullstack apaixonado por criar experiências
             incríveis no frontend. Com foco em Next.js, React, TypeScript, React
@@ -40,8 +41,8 @@ export default function Home() {
           </Section.Body>
         </Section>
 
-        <Section paddingTop={false}>
-          <Section.Heading align="right">
+        <Section>
+          <Section.Header align="right">
             <Section.Title
               fragmentSizes={['medium', 'large']}
               fragmentStyles={['fill', 'outline']}
@@ -49,14 +50,14 @@ export default function Home() {
             >
               Hard skills
             </Section.Title>
-          </Section.Heading>
+          </Section.Header>
           <Section.Body paddingLeft={false} paddingRight={false}>
             <SkillCards />
           </Section.Body>
         </Section>
 
         <Section>
-          <Section.Heading>
+          <Section.Header>
             <Section.Title
               fragmentSizes={['medium', 'large']}
               fragmentStyles={['fill', 'outline']}
@@ -64,7 +65,7 @@ export default function Home() {
             >
               Soft skills
             </Section.Title>
-          </Section.Heading>
+          </Section.Header>
           <Section.Body>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the s standard dummy text ever since
@@ -72,6 +73,36 @@ export default function Home() {
             scrambled it to make a type specimen book. It has survived not only
             five centuries, but also the leap into electronic
           </Section.Body>
+        </Section>
+
+        <Section>
+          <Section.Header>
+            <Section.Title
+              fragmentSizes={['sm-large']}
+              fragmentStyles={['outline']}
+              fragmentTextTransforms={['uppercase']}
+            >
+              Formação
+            </Section.Title>
+          </Section.Header>
+          <Section.Body>
+            <Education />
+          </Section.Body>
+        </Section>
+
+        <hr className={styles.separator} />
+
+        <Section>
+          <Section.Header align="right">
+            <Section.Title
+              fragmentSizes={['medium', 'sm-large']}
+              fragmentStyles={['fill', 'outline']}
+              fragmentTextTransforms={['capitalize', 'uppercase']}
+            >
+              Meu portifólio
+            </Section.Title>
+          </Section.Header>
+          <Section.Body></Section.Body>
         </Section>
 
         {Array(100).fill(<br />)}

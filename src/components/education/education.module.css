@@ -1,0 +1,57 @@
+.wrapper {
+  
+}
+
+.education-list {
+  
+}
+
+.education-item {
+  --education-image-container-border-width: 2px;
+  --education-image-container-width: 150px;
+  --education-image-container-height: 80px;
+  --wave-height: 50px;
+
+  display: flex;
+  flex-direction: column;
+  background-image: url('/assets/images/wave-2.png');
+  background-repeat: no-repeat;
+  background-size: auto var(--wave-height);
+  background-position:
+    calc(var(--education-image-container-width) + var(--education-image-container-border-width))
+    calc((var(--education-image-container-height) / 2) - (var(--wave-height) / 2));
+
+  & + .education-item {
+    margin-top: var(--spacing-10);
+  }
+
+  &:nth-child(2n+2) {
+    background-position:
+    right calc(var(--education-image-container-width) + var(--education-image-container-border-width))
+    top calc((var(--education-image-container-height) / 2) - (var(--wave-height) / 2));
+
+    .education-image-container {
+      align-self: flex-end;
+    }
+  }
+}
+
+.education-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--education-image-container-width);
+  height: var(--education-image-container-height);
+  border: var(--education-image-container-border-width) var(--primary-color) solid;
+  background-color: white;
+}
+
+.education-image {
+  max-width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.education-description {
+  margin-top: var(--spacing-6);
+}

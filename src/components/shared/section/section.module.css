@@ -6,9 +6,13 @@
   &.padding-bottom {
     padding-bottom: var(--spacing-8);
   }
+
+  & + .wrapper {
+    padding-top: var(--spacing-5);
+  }
 }
 
-.heading {
+.header {
   display: flex;
   flex-direction: column;
   padding: 0 var(--spacing-3);
@@ -19,6 +23,7 @@
 
   &.align-center {
     align-items: center;
+    text-align: center;
   }
 
   &.align-right {
@@ -26,7 +31,7 @@
   }
   
   & + .body {
-    padding-top: var(--spacing-5);
+    padding-top: var(--spacing-7);
   }
 }
 
@@ -50,11 +55,15 @@
 
   &.style-outline {
     color: transparent;
-    -webkit-text-stroke: 3px var(--section-title-color);
+    -webkit-text-stroke: 2px var(--section-title-color);
   }
 
   &.size-medium {
     font-size: var(--font-size-6);
+  }
+
+  &.size-sm-large {
+    font-size: var(--font-size-9);
   }
 
   &.size-large {
