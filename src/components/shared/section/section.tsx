@@ -2,10 +2,15 @@ import React, { Children, PropsWithChildren } from 'react'
 import styles from './section.module.css'
 import classNames from 'classnames'
 
-interface SectionComponent extends React.FC<PropsWithChildren> {
+interface SectionComponent extends React.FC<PropsWithChildren<SectionProps>> {
   Heading: React.FC<SectionHeadingProps>
   Title: React.FC<SectionTitleProps>
   Body: React.FC<SectionBodyProps>
+}
+
+type SectionProps = {
+  paddingTop?: boolean
+  paddingBottom?: boolean
 }
 
 type SectionHeadingProps = PropsWithChildren<{
@@ -24,12 +29,24 @@ type SectionTitleProps = {
   )[]
 }
 
-type SectionBodyProps = PropsWithChildren<{}>
+type SectionBodyProps = PropsWithChildren<{
+  paddingLeft?: boolean
+  paddingRight?: boolean
+}>
 
 const Section: SectionComponent = (props) => {
-  const { children } = props
+  const { children, paddingTop = true, paddingBottom = true } = props
 
-  return <section className={styles.wrapper}>{children}</section>
+  return (
+    <section
+      className={classNames(styles.wrapper, {
+        [styles['padding-top']]: paddingTop,
+        [styles['padding-bottom']]: paddingBottom,
+      })}
+    >
+      {children}
+    </section>
+  )
 }
 
 const SectionHeading: React.FC<SectionHeadingProps> = (props) => {
@@ -78,9 +95,18 @@ const SectionTitle: React.FC<SectionTitleProps> = (props) => {
 }
 
 const SectionBody: React.FC<SectionBodyProps> = (props) => {
-  const { children } = props
+  const { children, paddingLeft = true, paddingRight = true } = props
 
-  return <div className={styles['body']}>{children}</div>
+  return (
+    <div
+      className={classNames(styles['body'], {
+        [styles['padding-left']]: paddingLeft,
+        [styles['padding-right']]: paddingRight,
+      })}
+    >
+      {children}
+    </div>
+  )
 }
 
 Section.Title = SectionTitle

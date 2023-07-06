@@ -39,6 +39,40 @@ export default function Home() {
           </Section.Body>
         </Section>
 
+        <Section>
+          <Section.Heading align="left">
+            <Section.Title
+              fragmentSizes={['medium', 'large']}
+              fragmentStyles={['fill', 'outline']}
+              fragmentTextTransforms={['capitalize', 'uppercase']}
+            >
+              Hard skills
+            </Section.Title>
+          </Section.Heading>
+          <Section.Body paddingLeft={false} paddingRight={false}>
+            lalal
+          </Section.Body>
+        </Section>
+
+        <Section>
+          <Section.Heading align="left">
+            <Section.Title
+              fragmentSizes={['medium', 'large']}
+              fragmentStyles={['fill', 'outline']}
+              fragmentTextTransforms={['capitalize', 'uppercase']}
+            >
+              Soft skills
+            </Section.Title>
+          </Section.Heading>
+          <Section.Body>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the s standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic
+          </Section.Body>
+        </Section>
+
         {Array(100).fill(<br />)}
       </main>
       <SocialButtons />
