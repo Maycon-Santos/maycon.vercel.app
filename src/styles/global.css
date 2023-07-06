@@ -75,3 +75,7 @@ i.symbol {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
 }
+
+b {
+  font-weight: var(--font-weight-bold);
+}

@@ -1,0 +1,142 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  background-color: rgb(26 26 26 / 60%);
+  backdrop-filter: blur(4px) grayscale(60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.wrapper {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  color: var(--foreground-reverse-color);
+  background-color: var(--ground-color);
+  transform: translateX(100%);
+  transition: all 300ms ease-in-out;
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.close-button {
+  align-self: flex-end;
+  border: none;
+  margin-bottom: var(--spacing-3);
+  background: none;
+  color: var(--primary-color);
+
+  & .close-icon {
+    font-size: var(--icon-size-2);
+  }
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  background-image: url('/assets/images/wave-1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.profile-image {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-3);
+}
+
+.profile-name {
+  margin-top: var(--spacing-2);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+.profile-label {
+  margin-top: var(--spacing-1);
+  font-size: var(--font-size-2);
+  text-align: center;
+}
+
+.personal-info {
+  margin-top: var(--spacing-7);
+}
+
+.personal-info-row {
+  & + .personal-info-row {
+    margin-top: var(--spacing-1);
+  }
+}
+
+.separator {
+  width: 80%;
+  margin: var(--spacing-7) auto;
+  border-color: var(--primary-color);
+}
+
+.main-skills-container {
+
+}
+
+.main-skills-title {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-bold);
+}
+
+.main-skills-list {
+  margin-top: var(--spacing-2);
+}
+
+.main-skills-item {
+  display: flex;
+  align-items: center;
+
+  & + .main-skills-item {
+    margin-top: var(--spacing-1);
+  }
+}
+
+.main-skills-item-icon {
+  margin-right: var(--spacing-1);
+  color: var(--secondary-color);
+}
+
+.download-cv-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-7);
+  border-radius: 60px;
+  padding: var(--spacing-4) var(--spacing-3);
+  box-sizing: border-box;
+  color: var(--secondary-color);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--primary-color);
+}
+
+.download-cv-icon {
+  margin-right: var(--spacing-1);
+}

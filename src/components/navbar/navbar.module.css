@@ -46,7 +46,7 @@
   margin-left: auto;
 }
 
-.sidebar-toggle-button {
+.open-sidebar-button {
   position: relative;
   display: flex;
   flex-direction: column;
