@@ -11,6 +11,8 @@
   --font-size-7: 36px;
   --font-size-8: 40px;
   --font-size-9: 48px;
+  --font-size-10: 60px;
+  --font-size-11: 70px;
 
   --spacing-0: 4px;
   --spacing-1: 8px;
@@ -44,6 +46,7 @@
   --ground-color: #242424;
   --foreground-color: rgba(255, 249, 243, 0.72);
   --foreground-reverse-color: #F5F5F5;
+  --section-title-color: #FFF9F3;
 }
 
 .light-mode {
@@ -51,6 +54,7 @@
   --ground-color: #242424;
   --foreground-color: rgba(36, 36, 36, 0.72);
   --foreground-reverse-color: #F5F5F5;
+  --section-title-color: #9C26DF;
 }
 
 body {
