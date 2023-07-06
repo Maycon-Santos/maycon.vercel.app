@@ -11,6 +11,19 @@
 .heading {
   display: flex;
   flex-direction: column;
+  padding: 0 var(--spacing-3);
+
+  &.align-left {
+    align-items: flex-start;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.align-right {
+    align-items: flex-end;
+  }
   
   & + .body {
     padding-top: var(--spacing-5);
@@ -21,7 +34,6 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 var(--spacing-3);
 
   & + .title {
     margin-top: var(--spacing-1);
@@ -31,39 +43,35 @@
 .title-fragment {
   font-weight: var(--font-weight-bold);
   margin-right: var(--spacing-2);
-}
 
-.title-fragment-break-line {
-  flex-basis: 100%;
-}
+  &.style-fill {
+    color: var(--section-title-color);
+  }
 
-.title-fragment-style-fill {
-  color: var(--section-title-color);
-}
+  &.style-outline {
+    color: transparent;
+    -webkit-text-stroke: 3px var(--section-title-color);
+  }
 
-.title-fragment-style-outline {
-  color: transparent;
-  -webkit-text-stroke: 3px var(--section-title-color);
-}
+  &.size-medium {
+    font-size: var(--font-size-6);
+  }
 
-.title-fragment-size-medium {
-  font-size: var(--font-size-6);
-}
+  &.size-large {
+    font-size: var(--font-size-11);
+  }
 
-.title-fragment-size-large {
-  font-size: var(--font-size-11);
-}
+  &.text-transform-uppercase {
+    text-transform: uppercase;
+  }
 
-.title-fragment-text-transform-uppercase {
-  text-transform: uppercase;
-}
+  &.text-transform-lowercase {
+    text-transform: lowercase;
+  }
 
-.title-fragment-text-transform-lowercase {
-  text-transform: lowercase;
-}
-
-.title-fragment-text-transform-capitalize {
-  text-transform: capitalize;
+  &.text-transform-capitalize {
+    text-transform: capitalize;
+  }
 }
 
 .body {

@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar onOpenAside={() => setAsideIsOpen(true)} />
       <main className={styles.main}>
         <Section>
-          <Section.Heading align="left">
+          <Section.Heading>
             <Section.Title
               fragmentSizes={['large']}
               fragmentStyles={['outline']}
@@ -41,7 +41,7 @@ export default function Home() {
         </Section>
 
         <Section paddingTop={false}>
-          <Section.Heading align="left">
+          <Section.Heading align="right">
             <Section.Title
               fragmentSizes={['medium', 'large']}
               fragmentStyles={['fill', 'outline']}
@@ -56,7 +56,7 @@ export default function Home() {
         </Section>
 
         <Section>
-          <Section.Heading align="left">
+          <Section.Heading>
             <Section.Title
               fragmentSizes={['medium', 'large']}
               fragmentStyles={['fill', 'outline']}
