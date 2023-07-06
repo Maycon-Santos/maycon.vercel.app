@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar'
 import SocialButtons from '@/components/social-buttons'
 import ProfileAside from '@/components/profile-aside'
 import Section from '@/components/shared/section'
+import SkillCards from '@/components/skill-cards'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
           </Section.Body>
         </Section>
 
-        <Section>
+        <Section paddingTop={false}>
           <Section.Heading align="left">
             <Section.Title
               fragmentSizes={['medium', 'large']}
@@ -50,7 +51,7 @@ export default function Home() {
             </Section.Title>
           </Section.Heading>
           <Section.Body paddingLeft={false} paddingRight={false}>
-            lalal
+            <SkillCards />
           </Section.Body>
         </Section>
 

@@ -1,0 +1,61 @@
+.wrapper {
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.card-list {
+  --image-container-border-size: 3px;
+  --image-container-size: 90px;
+
+  display: flex;
+  padding-top: calc((var(--image-container-size) / 2) + var(--image-container-border-size));
+  
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 70vw;
+  max-width: 300px;
+  margin-left: var(--spacing-3);
+  border: 3px var(--secondary-color) solid;
+  border-radius: 15px;
+  padding-right: var(--spacing-3);
+  padding-left: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+  box-sizing: border-box;
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+}
+
+.skill-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--image-container-size);
+  height: var(--image-container-size);
+  margin-bottom: calc((var(--image-container-size) / 2) * -1);
+  border-radius: 50%;
+  border: var(--image-container-border-size) var(--background-color) solid;
+  background-color: var(--primary-color);
+  transform: translateY(-50%);
+}
+
+.skill-image {
+  width: 75%;
+  height: 45%;
+  object-fit: contain;
+}
+
+.skill-name {
+  margin-top: var(--spacing-1);
+  color: var(--secondary-color);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-bold);
+}
+
+.skill-description {
+  margin-top: var(--spacing-2);
+  text-align: center;
+}

@@ -1,6 +1,6 @@
-import React, { Children, PropsWithChildren } from 'react'
-import styles from './section.module.css'
 import classNames from 'classnames'
+import React, { PropsWithChildren } from 'react'
+import styles from './section.module.css'
 
 interface SectionComponent extends React.FC<PropsWithChildren<SectionProps>> {
   Heading: React.FC<SectionHeadingProps>
