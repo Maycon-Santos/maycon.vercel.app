@@ -1,4 +1,5 @@
 .separator {
   width: 50%;
+  margin: var(--spacing-3) auto;
   border-color: var(--ground-color);
 }

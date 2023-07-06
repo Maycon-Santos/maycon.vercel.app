@@ -7,6 +7,7 @@ import ProfileAside from '@/components/profile-aside'
 import Section from '@/components/shared/section'
 import SkillCards from '@/components/skill-cards'
 import Education from '@/components/education'
+import PortfolioCards from '@/components/portfolio-cards'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -102,10 +103,10 @@ export default function Home() {
               Meu portifólio
             </Section.Title>
           </Section.Header>
-          <Section.Body></Section.Body>
+          <Section.Body>
+            <PortfolioCards />
+          </Section.Body>
         </Section>
-
-        {Array(100).fill(<br />)}
       </main>
       <SocialButtons />
       <ProfileAside open={asideIsOpen} onClose={() => setAsideIsOpen(false)} />
