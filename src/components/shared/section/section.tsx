@@ -20,7 +20,7 @@ type SectionHeadingProps = PropsWithChildren<{
 type SectionTitleProps = {
   children: string
   fragmentStyles?: ('fill' | 'outline')[]
-  fragmentSizes?: ('medium' | 'sm-large' | 'large')[]
+  fragmentSizes?: ('medium' | 'sm-large' | 'md-large' | 'large')[]
   fragmentTextTransforms?: (
     | 'uppercase'
     | 'lowercase'

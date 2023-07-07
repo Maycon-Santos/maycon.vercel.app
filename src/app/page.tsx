@@ -8,6 +8,8 @@ import Section from '@/components/shared/section'
 import SkillCards from '@/components/skill-cards'
 import Education from '@/components/education'
 import PortfolioCards from '@/components/portfolio-cards'
+import Experiences from '@/components/experiences'
+import { awards, experiences } from '@/data/experiences'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -79,7 +81,7 @@ export default function Home() {
         <Section>
           <Section.Header>
             <Section.Title
-              fragmentSizes={['sm-large']}
+              fragmentSizes={['md-large']}
               fragmentStyles={['outline']}
               fragmentTextTransforms={['uppercase']}
             >
@@ -96,7 +98,7 @@ export default function Home() {
         <Section>
           <Section.Header align="right">
             <Section.Title
-              fragmentSizes={['medium', 'sm-large']}
+              fragmentSizes={['medium', 'md-large']}
               fragmentStyles={['fill', 'outline']}
               fragmentTextTransforms={['capitalize', 'uppercase']}
             >
@@ -105,6 +107,43 @@ export default function Home() {
           </Section.Header>
           <Section.Body>
             <PortfolioCards />
+          </Section.Body>
+        </Section>
+
+        <Section>
+          <Section.Header align="center">
+            <Section.Title
+              fragmentSizes={['medium']}
+              fragmentStyles={['fill']}
+              fragmentTextTransforms={['capitalize']}
+            >
+              Experiência
+            </Section.Title>
+            <Section.Title
+              fragmentSizes={['sm-large']}
+              fragmentStyles={['outline']}
+              fragmentTextTransforms={['uppercase']}
+            >
+              Profissional
+            </Section.Title>
+          </Section.Header>
+          <Section.Body>
+            <Experiences items={experiences} />
+          </Section.Body>
+        </Section>
+
+        <Section>
+          <Section.Header align="center">
+            <Section.Title
+              fragmentSizes={['sm-large']}
+              fragmentStyles={['outline']}
+              fragmentTextTransforms={['uppercase']}
+            >
+              Premiação!
+            </Section.Title>
+          </Section.Header>
+          <Section.Body>
+            <Experiences items={awards} titleSize="small" />
           </Section.Body>
         </Section>
       </main>

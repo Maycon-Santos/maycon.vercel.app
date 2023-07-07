@@ -1,3 +1,6 @@
+import { StaticImageData } from 'next/image'
+import { Media } from '@/components/shared/gallery'
+
 import codezoneLogoImage from '@/assets/images/experiences/codezone.jpg'
 import hurbLogoImage from '@/assets/images/experiences/hurb.jpg'
 import olimpiadaDoConhecimentoImage from '@/assets/images/experiences/olimpiada-do-conhecimento.png'
@@ -6,22 +9,23 @@ import Olimpiada1Image from '@/assets/images/experiences/olimpiada-1.jpg'
 import Olimpiada2Image from '@/assets/images/experiences/olimpiada-2.jpg'
 import Olimpiada3Image from '@/assets/images/experiences/olimpiada-3.png'
 
-export const experiences = [
-  {
-    logoImage: codezoneLogoImage,
-    company: 'Codezone Digital Business',
-    description: [
-      'Trabalhei na Codezone Digital Business e tive a oportunidade incrível de participar de diversos projetos para grandes marcas, como Nestlé, Uber, Colgate e Banco do Brasil. Fiquei impressionado com a quantidade de projetos que recebemos de agências renomadas, como LiveTeam, AMPFY e Publicis. Foi muito gratificante ver a confiança que essas agências depositaram na Codezone.',
-      'Durante o meu tempo na empresa, pude trabalhar com uma variedade de tecnologias modernas, como React, Angular, Vue, React Native e Node.js. Foi muito estimulante poder me envolver com diferentes ferramentas e aprender a aplicá-las em projetos reais. Essa diversidade tecnológica realmente reflete a versatilidade da Codezone e a capacidade de atender às demandas dos clientes em diferentes plataformas.',
-      'Cada projeto foi único e apresentou seus próprios desafios. No entanto, com minha experiência e conhecimento, pude desenvolver soluções eficientes e de alta qualidade. Foi gratificante ver as marcas de renome reconhecendo o trabalho que fizemos e alcançando resultados impressionantes.',
-      'Trabalhar com essas grandes marcas também proporcionou uma oportunidade única de colaborar com equipes talentosas e adquirir valiosas habilidades de comunicação e trabalho em equipe. Foi enriquecedor poder aprender com profissionais experientes e compartilhar conhecimentos uns com os outros.',
-      'Além disso, enfrentei prazos apertados e situações de pressão, mas isso só me ajudou a desenvolver ainda mais minhas habilidades de resolução de problemas e minha capacidade de me adaptar a novos desafios. Acredito que esse ambiente de trabalho dinâmico me ajudou a crescer tanto pessoal quanto profissionalmente.',
-      'No geral, minha experiência na Codezone Digital Business foi incrível. Tive a chance de trabalhar com tecnologias modernas, colaborar com grandes marcas e agências renomadas, além de desenvolver habilidades valiosas ao enfrentar desafios complexos. Estou extremamente grato por ter feito parte dessa equipe talentosa e contribuído para o sucesso dos projetos.',
-    ],
-  },
+export type Experience = {
+  logoImage: StaticImageData
+  company: string
+  dateRange: string[]
+  description: string[]
+  medias?: Media[]
+  links?: {
+    text: string
+    href: string
+  }[]
+}
+
+export const experiences: Experience[] = [
   {
     logoImage: hurbLogoImage,
     company: 'Hurb',
+    dateRange: ['2019', '2022'],
     description: [
       'Trabalhar na Hurb, uma renomada agência de turismo digital, foi uma experiência extremamente enriquecedora para o meu crescimento profissional. Ao longo do meu tempo nesta empresa inovadora, tive a oportunidade de me envolver com um conjunto diversificado de tecnologias que impulsionam a indústria do turismo e além.',
       'Uma das principais tecnologias que tive a chance de explorar foi o Node.js. Com essa plataforma de desenvolvimento, pude criar aplicações web de alto desempenho, escaláveis e em tempo real. Através do Node.js, fui capaz de desenvolver soluções eficientes e modernas, agregando valor aos projetos em que estive envolvido.',
@@ -35,7 +39,24 @@ export const experiences = [
     ],
   },
   {
+    logoImage: codezoneLogoImage,
+    company: 'Codezone',
+    dateRange: ['2018', '2019'],
+    description: [
+      'Trabalhei na Codezone Digital Business e tive a oportunidade incrível de participar de diversos projetos para grandes marcas, como Nestlé, Uber, Colgate e Banco do Brasil. Fiquei impressionado com a quantidade de projetos que recebemos de agências renomadas, como LiveTeam, AMPFY e Publicis. Foi muito gratificante ver a confiança que essas agências depositaram na Codezone.',
+      'Durante o meu tempo na empresa, pude trabalhar com uma variedade de tecnologias modernas, como React, Angular, Vue, React Native e Node.js. Foi muito estimulante poder me envolver com diferentes ferramentas e aprender a aplicá-las em projetos reais. Essa diversidade tecnológica realmente reflete a versatilidade da Codezone e a capacidade de atender às demandas dos clientes em diferentes plataformas.',
+      'Cada projeto foi único e apresentou seus próprios desafios. No entanto, com minha experiência e conhecimento, pude desenvolver soluções eficientes e de alta qualidade. Foi gratificante ver as marcas de renome reconhecendo o trabalho que fizemos e alcançando resultados impressionantes.',
+      'Trabalhar com essas grandes marcas também proporcionou uma oportunidade única de colaborar com equipes talentosas e adquirir valiosas habilidades de comunicação e trabalho em equipe. Foi enriquecedor poder aprender com profissionais experientes e compartilhar conhecimentos uns com os outros.',
+      'Além disso, enfrentei prazos apertados e situações de pressão, mas isso só me ajudou a desenvolver ainda mais minhas habilidades de resolução de problemas e minha capacidade de me adaptar a novos desafios. Acredito que esse ambiente de trabalho dinâmico me ajudou a crescer tanto pessoal quanto profissionalmente.',
+      'No geral, minha experiência na Codezone Digital Business foi incrível. Tive a chance de trabalhar com tecnologias modernas, colaborar com grandes marcas e agências renomadas, além de desenvolver habilidades valiosas ao enfrentar desafios complexos. Estou extremamente grato por ter feito parte dessa equipe talentosa e contribuído para o sucesso dos projetos.',
+    ],
+  },
+]
+
+export const awards: Experience[] = [
+  {
     logoImage: olimpiadaDoConhecimentoImage,
+    dateRange: ['2017'],
     company:
       'Experiência de Destaque na Olimpíada do Conhecimento de Web Design da FIRJAN',
     description: [
@@ -51,6 +72,22 @@ export const experiences = [
         href: 'https://firjansenai.com.br/cursorio/blog/senai-rio-premia-alunos-na-fase-estadual-da-olimpiada-do-conhecimento',
       },
     ],
-    images: [Olimpiada1Image, Olimpiada2Image, Olimpiada3Image],
+    medias: [
+      {
+        type: 'image',
+        src: Olimpiada1Image,
+        alt: '',
+      },
+      {
+        type: 'image',
+        src: Olimpiada2Image,
+        alt: '',
+      },
+      {
+        type: 'image',
+        src: Olimpiada3Image,
+        alt: '',
+      },
+    ],
   },
 ]
