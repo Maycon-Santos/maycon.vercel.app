@@ -10,10 +10,6 @@ const PortfolioCards: React.FC = () => {
       <ul className={styles['card-list']}>
         {projects.map(({ name, image }) => (
           <li className={styles['card-item']} key={name}>
-            {(() => {
-              console.log(slugify(name), name)
-              return null
-            })()}
             <Link
               href={`/portfolio/${slugify(name, {
                 strict: true,
