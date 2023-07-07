@@ -4,10 +4,10 @@ import { useThemeMode } from '@/components/shared/theme-mode'
 import styles from './switch-theme-mode-button.module.css'
 
 const SwitchThemeModeButton: React.FC = () => {
-  const { match } = useThemeMode()
+  const { match, toggleThemeMode } = useThemeMode()
 
   return (
-    <button className={styles.wrapper}>
+    <button className={styles.wrapper} onClick={toggleThemeMode}>
       <i className="symbol">
         {match({
           dark: 'light_mode',
