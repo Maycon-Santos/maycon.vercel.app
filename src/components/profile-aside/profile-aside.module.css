@@ -30,7 +30,7 @@
   color: var(--foreground-reverse-color);
   background-color: var(--ground-color);
   transform: translateX(100%);
-  transition: all 300ms ease-in-out;
+  transition: all 500ms ease-in-out;
 
   &.open {
     transform: translateX(0);
@@ -101,7 +101,6 @@
 }
 
 .main-skills-container {
-
 }
 
 .main-skills-title {
