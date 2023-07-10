@@ -6,5 +6,15 @@
   height: 40px;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
   background-color: var(--primary-color);
+
+  @media (--large-viewport) {
+    width: 60px;
+    height: 60px;
+
+    & :global(i.symbol) {
+      font-size: var(--icon-size-1);
+    }
+  }
 }

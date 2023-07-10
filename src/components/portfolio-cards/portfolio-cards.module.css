@@ -1,10 +1,18 @@
 .wrapper {
-
 }
 
 .card-list {
+  --card-item-gap: var(--spacing-2);
+
   display: flex;
   flex-direction: column;
+  margin-top: calc(var(--card-item-gap) * -1);
+
+  @media (--medium-viewport) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .card-item {
@@ -13,9 +21,16 @@
   padding-top: 60%;
   border-radius: 8px;
   overflow: hidden;
+  margin-top: var(--card-item-gap);
 
-  & + .card-item {
-    margin-top: var(--spacing-2);
+  @media (--medium-viewport) {
+    width: calc(43% - (var(--card-item-gap) / 2));
+    padding-top: 27%;
+
+    &:nth-child(3n + 1),
+    &:nth-child(5) {
+      width: calc(57% - (var(--card-item-gap) / 2));
+    }
   }
 }
 

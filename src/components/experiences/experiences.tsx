@@ -7,10 +7,11 @@ import styles from './experiences.module.css'
 type ExperiencesProps = {
   items: Experience[]
   titleSize?: 'small' | 'medium'
+  descriptionFullWidth?: boolean
 }
 
 const Experiences: React.FC<ExperiencesProps> = (props) => {
-  const { items, titleSize = 'medium' } = props
+  const { items, titleSize = 'medium', descriptionFullWidth = false } = props
 
   return (
     <div className={styles.wrapper}>
@@ -29,12 +30,19 @@ const Experiences: React.FC<ExperiencesProps> = (props) => {
                   styles[`company-name-${titleSize}`],
                 )}
               >
-                {company}{' '}
-                <span className={styles['date-range']}>
-                  ({dateRange.join(' - ')})
+                <span>
+                  {company}{' '}
+                  <span className={styles['date-range']}>
+                    ({dateRange.join(' - ')})
+                  </span>
                 </span>
               </h3>
-              <div className={styles['experience-description']}>
+              {descriptionFullWidth && <br />}
+              <div
+                className={classNames(styles['experience-description'], {
+                  [styles['description-full-width']]: descriptionFullWidth,
+                })}
+              >
                 {description.map((fragment) => (
                   <p
                     className={styles['experience-description-paragraph']}

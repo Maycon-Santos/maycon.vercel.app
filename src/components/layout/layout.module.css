@@ -1,0 +1,36 @@
+.wrapper {
+  position: relative;
+  display: flex;
+}
+
+.main {
+  width: 100vw;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @media (--large-viewport) {
+    width: initial;
+  }
+}
+
+.aside {
+  @media (--large-viewport) {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 var(--spacing-7);
+    margin-left: auto;
+  }
+}
+
+.switch-theme-mode-button-container {
+  display: none;
+
+  @media (--large-viewport) {
+    display: initial;
+  }
+}

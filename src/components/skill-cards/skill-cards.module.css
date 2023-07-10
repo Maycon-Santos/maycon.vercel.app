@@ -1,6 +1,9 @@
 .wrapper {
   overflow-y: auto;
   scroll-snap-type: x mandatory;
+  @media (--large-viewport) {
+    padding: 0 var(--section-horizontal-spacing);
+  }
 }
 
 .card-list {
@@ -8,8 +11,26 @@
   --image-container-size: 90px;
 
   display: flex;
-  padding-top: calc((var(--image-container-size) / 2) + var(--image-container-border-size));
-  
+  margin-top: calc(
+    (var(--image-container-size) / 2) + var(--image-container-border-size)
+  );
+
+  &::after {
+    content: '';
+    display: block;
+    flex: 0 0 var(--spacing-3);
+    height: 1px;
+  }
+
+  @media (--large-viewport) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: calc(var(--spacing-3) * -1);
+
+    &::after {
+      content: none;
+    }
+  }
 }
 
 .card-item {
@@ -27,6 +48,27 @@
   box-sizing: border-box;
   scroll-snap-stop: always;
   scroll-snap-align: center;
+
+  &.ghost {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  @media (--large-viewport) {
+    flex: 0 0 18vw;
+    max-width: 260px;
+    margin-left: 0;
+    margin-top: calc(
+      var(--spacing-3) +
+        ((var(--image-container-size) + var(--image-container-border-size)) / 2)
+    );
+
+    &.ghost {
+      display: block;
+    }
+  }
 }
 
 .skill-image-container {

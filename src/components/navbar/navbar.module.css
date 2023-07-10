@@ -7,6 +7,10 @@
   padding: var(--spacing-3);
   color: var(--foreground-reverse-color);
   background-color: var(--ground-color);
+
+  @media (--large-viewport) {
+    display: none;
+  }
 }
 
 .profile-container {

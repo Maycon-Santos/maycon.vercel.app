@@ -6,6 +6,7 @@ import '@/styles/global.css'
 
 const ubuntu = Ubuntu({
   subsets: ['latin'],
+  display: 'swap',
   weight: ['400', '700'],
 })
 

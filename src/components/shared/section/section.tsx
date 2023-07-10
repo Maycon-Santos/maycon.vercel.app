@@ -30,8 +30,8 @@ type SectionTitleProps = {
 }
 
 type SectionBodyProps = PropsWithChildren<{
-  paddingLeft?: boolean
-  paddingRight?: boolean
+  spacingLeft?: boolean
+  spacingRight?: boolean
 }>
 
 const Section: SectionComponent = (props) => {
@@ -97,13 +97,17 @@ const SectionTitle: React.FC<SectionTitleProps> = (props) => {
 }
 
 const SectionBody: React.FC<SectionBodyProps> = (props) => {
-  const { children, paddingLeft = true, paddingRight = true } = props
+  const {
+    children,
+    spacingLeft: paddingLeft = true,
+    spacingRight: paddingRight = true,
+  } = props
 
   return (
     <div
       className={classNames(styles['body'], {
-        [styles['padding-left']]: paddingLeft,
-        [styles['padding-right']]: paddingRight,
+        [styles['spacing-left']]: paddingLeft,
+        [styles['spacing-right']]: paddingRight,
       })}
     >
       {children}

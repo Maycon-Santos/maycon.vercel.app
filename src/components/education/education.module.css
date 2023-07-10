@@ -1,9 +1,7 @@
 .wrapper {
-  
 }
 
 .education-list {
-  
 }
 
 .education-item {
@@ -14,36 +12,80 @@
 
   display: flex;
   flex-direction: column;
+  margin: 0 var(--section-horizontal-spacing);
   background-image: url('/assets/images/wave-2.png');
   background-repeat: no-repeat;
   background-size: auto var(--wave-height);
-  background-position:
-    calc(var(--education-image-container-width) + var(--education-image-container-border-width))
-    calc((var(--education-image-container-height) / 2) - (var(--wave-height) / 2));
+  background-position: calc(
+      var(--education-image-container-width) +
+        var(--education-image-container-border-width)
+    )
+    calc(
+      (var(--education-image-container-height) / 2) - (var(--wave-height) / 2)
+    );
 
   & + .education-item {
     margin-top: var(--spacing-10);
   }
 
-  &:nth-child(2n+2) {
-    background-position:
-    right calc(var(--education-image-container-width) + var(--education-image-container-border-width))
-    top calc((var(--education-image-container-height) / 2) - (var(--wave-height) / 2));
+  &:nth-child(2n + 2) {
+    background-position: right
+      calc(
+        var(--education-image-container-width) +
+          var(--education-image-container-border-width)
+      )
+      top
+      calc(
+        (var(--education-image-container-height) / 2) - (var(--wave-height) / 2)
+      );
 
     .education-image-container {
       align-self: flex-end;
     }
   }
+
+  @media (--medium-viewport) {
+    flex-direction: row;
+    background: none;
+
+    & + .education-item {
+      margin-top: var(--spacing-13);
+    }
+  }
 }
 
 .education-image-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: var(--education-image-container-width);
   height: var(--education-image-container-height);
-  border: var(--education-image-container-border-width) var(--primary-color) solid;
+  border: var(--education-image-container-border-width) var(--primary-color)
+    solid;
   background-color: white;
+
+  @media (--medium-viewport) {
+    --wave-width: 50px;
+    --wave-height: 140px;
+
+    flex: 0 0 var(--education-image-container-width);
+    margin-left: calc(var(--wave-width) / 2);
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: calc(100% - (var(--wave-width) / 2));
+      top: calc(50% - (var(--wave-height) / 2));
+      z-index: -1;
+      display: block;
+      width: var(--wave-width);
+      height: var(--wave-height);
+      background-image: url('/assets/images/wave-3.png');
+      background-size: contain;
+      background-position: center center;
+    }
+  }
 }
 
 .education-image {
@@ -54,4 +96,9 @@
 
 .education-description {
   margin-top: var(--spacing-6);
+
+  @media (--medium-viewport) {
+    margin-top: 0;
+    margin-left: var(--spacing-7);
+  }
 }

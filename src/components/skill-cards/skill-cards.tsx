@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import classNames from 'classnames'
 import { skills } from '@/data/skills'
 import styles from './skill-cards.module.css'
 
@@ -21,6 +22,14 @@ const SkillCards: React.FC = () => {
             </li>
           )
         })}
+        {Array(6)
+          .fill(null)
+          .map((_, index) => (
+            <li
+              className={classNames(styles['card-item'], styles['ghost'])}
+              key={index}
+            />
+          ))}
       </ul>
     </div>
   )
