@@ -10,8 +10,8 @@
   background-color: var(--primary-color);
 
   @media (--large-viewport) {
-    width: 60px;
-    height: 60px;
+    width: 66px;
+    height: 66px;
 
     & :global(i.symbol) {
       font-size: var(--icon-size-1);

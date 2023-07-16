@@ -1,0 +1,26 @@
+{
+  "patterns": {
+    "component": {
+      "dir": "src/components",
+      "caseStyle": "kebab",
+      "template": "templates/component",
+      "data": {
+        "Component": {
+          "value": "_name_",
+          "caseStyle": "pascal"
+        }
+      }
+    },
+    "page": {
+      "dir": "src/app",
+      "caseStyle": "kebab",
+      "template": "templates/page",
+      "data": {
+        "Component": {
+          "value": "_name_",
+          "caseStyle": "pascal"
+        }
+      }
+    }
+  }
+}
