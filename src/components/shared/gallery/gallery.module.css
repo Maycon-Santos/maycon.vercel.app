@@ -1,5 +1,4 @@
 .wrapper {
-
 }
 
 .media-carousel-container {
@@ -22,7 +21,7 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
 }
@@ -35,6 +34,31 @@
   scroll-snap-stop: always;
   scroll-snap-align: center;
   background-color: var(--ground-color);
+}
+
+.thumb-list {
+  display: none;
+
+  @media (--medium-viewport) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-5);
+    margin-bottom: var(--spacing-9);
+  }
+}
+
+.thumb-item {
+  object-fit: cover;
+  width: calc(33% - var(--spacing-1));
+  height: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover,
+  &.selected {
+    opacity: 1;
+  }
 }
 
 .dot-list {
@@ -54,7 +78,7 @@
   &.selected {
     background-color: var(--secondary-color);
   }
-  
+
   & + .dot-item {
     margin-left: var(--spacing-3);
   }

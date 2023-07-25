@@ -1,14 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import slugify from 'slugify'
-import { projects } from '@/data/projects'
+import { Project } from '@/data/projects'
 import styles from './portfolio-cards.module.css'
 
-const PortfolioCards: React.FC = () => {
+type PortfolioCardsProps = {
+  items: Project[]
+}
+
+const PortfolioCards: React.FC<PortfolioCardsProps> = (props) => {
+  const { items } = props
+
   return (
     <div className={styles.wrapper}>
       <ul className={styles['card-list']}>
-        {projects.map(({ name, image }) => (
+        {items.map(({ name, image }) => (
           <li className={styles['card-item']} key={name}>
             <Link
               href={`/portfolio/${slugify(name, {

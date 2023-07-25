@@ -7,6 +7,7 @@ import PortfolioCards from '@/components/portfolio-cards'
 import Experiences from '@/components/experiences'
 import Layout from '@/components/layout'
 import { awards, experiences } from '@/data/experiences'
+import { projects } from '@/data/projects'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -96,7 +97,7 @@ export default function Home() {
           </Section.Title>
         </Section.Header>
         <Section.Body>
-          <PortfolioCards />
+          <PortfolioCards items={projects} />
         </Section.Body>
       </Section>
 
