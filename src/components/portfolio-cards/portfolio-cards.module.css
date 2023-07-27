@@ -61,4 +61,14 @@
   &:hover {
     opacity: 1;
   }
+
+  @media (--large-viewport) {
+    opacity: 0;
+    transform: translateY(20%);
+
+    &:hover {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

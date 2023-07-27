@@ -48,16 +48,38 @@
 }
 
 .thumb-item {
-  object-fit: cover;
+  position: relative;
   width: calc(33% - var(--spacing-1));
   height: 150px;
   border-radius: 10px;
+  overflow: hidden;
   cursor: pointer;
-  opacity: 0.5;
+  transition: all 150ms ease-in-out;
 
   &:hover,
   &.selected {
-    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+
+.thumb-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.thumb-play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--tertiary-color);
+
+  &:global(.symbol) {
+    font-size: var(--icon-size-3);
   }
 }
 

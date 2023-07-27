@@ -7,14 +7,22 @@
 }
 
 .back-button {
+  position: sticky;
+  top: calc(100px + var(--spacing-3));
+  z-index: 1;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: none;
+  cursor: pointer;
   background-color: var(--primary-color);
 
   :global(i.symbol) {
     font-size: var(--icon-size-1);
+  }
+
+  @media (--large-viewport) {
+    top: var(--spacing-5);
   }
 }
 

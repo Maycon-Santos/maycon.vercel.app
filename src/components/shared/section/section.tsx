@@ -77,19 +77,17 @@ const SectionTitle: React.FC<SectionTitleProps> = (props) => {
             'initial'
 
           return (
-            <>
-              <span
-                key={fragment}
-                className={classNames(
-                  styles['title-fragment'],
-                  styles[`style-${fragmentStyle}`],
-                  styles[`size-${fragmentSize}`],
-                  styles[`text-transform-${fragmentTextTransform}`],
-                )}
-              >
-                {fragment}
-              </span>
-            </>
+            <span
+              key={fragment}
+              className={classNames(
+                styles['title-fragment'],
+                styles[`style-${fragmentStyle}`],
+                styles[`size-${fragmentSize}`],
+                styles[`text-transform-${fragmentTextTransform}`],
+              )}
+            >
+              {fragment}
+            </span>
           )
         })}
     </h2>

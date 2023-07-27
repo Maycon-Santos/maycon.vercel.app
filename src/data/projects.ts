@@ -1,10 +1,25 @@
 import { StaticImageData } from 'next/image'
 import { Media } from '@/components/shared/gallery'
-import snakeGameImage from '@/assets/images/projects/snake-game.jpg'
-import enevaImage from '@/assets/images/projects/eneva.jpg'
-import cortevaImage from '@/assets/images/projects/corteva.jpg'
-import risqueImage from '@/assets/images/projects/risque.jpg'
-import infograficoANPImage from '@/assets/images/projects/infografico-anp.png'
+
+import snakeGameImage from '@/assets/images/projects/snake/image-1.png'
+import snakeGameImage2 from '@/assets/images/projects/snake/image-2.png'
+import snakeGameImage3 from '@/assets/images/projects/snake/video.gif'
+
+import enevaImage from '@/assets/images/projects/eneva/image-1.png'
+import enevaImage2 from '@/assets/images/projects/eneva/image-2.png'
+import enevaImage3 from '@/assets/images/projects/eneva/video.gif'
+
+import cortevaImage from '@/assets/images/projects/corteva/image-1.png'
+import cortevaImage2 from '@/assets/images/projects/corteva/image-2.png'
+import cortevaImage3 from '@/assets/images/projects/corteva/video.gif'
+
+import risqueImage from '@/assets/images/projects/risque/image-1.png'
+import risqueImage2 from '@/assets/images/projects/risque/image-2.png'
+import risqueImage3 from '@/assets/images/projects/risque/video.gif'
+
+import infograficoANPImage from '@/assets/images/projects/Infografico/image-1.png'
+import infograficoANPImage2 from '@/assets/images/projects/Infografico/image-2.png'
+import infograficoANPImage3 from '@/assets/images/projects/Infografico/video.gif'
 
 export type Project = {
   name: string
@@ -31,6 +46,17 @@ export const projects: Project[] = [
         thumbSrc: snakeGameImage,
         alt: '',
       },
+      {
+        type: 'image',
+        src: snakeGameImage2,
+        thumbSrc: snakeGameImage2,
+        alt: '',
+      },
+      {
+        type: 'video',
+        src: '/assets/videos/projects/snake/video.mp4',
+        thumbSrc: snakeGameImage3,
+      },
     ],
     links: {
       video:
@@ -52,15 +78,14 @@ export const projects: Project[] = [
       },
       {
         type: 'image',
-        src: snakeGameImage,
-        thumbSrc: snakeGameImage,
+        src: enevaImage2,
+        thumbSrc: enevaImage2,
         alt: '',
       },
       {
-        type: 'image',
-        src: snakeGameImage,
-        thumbSrc: snakeGameImage,
-        alt: '',
+        type: 'video',
+        src: '/assets/videos/projects/eneva/video.mp4',
+        thumbSrc: enevaImage3,
       },
     ],
     links: {
@@ -80,6 +105,17 @@ export const projects: Project[] = [
         thumbSrc: cortevaImage,
         alt: '',
       },
+      {
+        type: 'image',
+        src: cortevaImage2,
+        thumbSrc: cortevaImage2,
+        alt: '',
+      },
+      {
+        type: 'video',
+        src: '/assets/videos/projects/corteva/video.mp4',
+        thumbSrc: cortevaImage3,
+      },
     ],
     links: {
       video:
@@ -98,6 +134,17 @@ export const projects: Project[] = [
         thumbSrc: risqueImage,
         alt: '',
       },
+      {
+        type: 'image',
+        src: risqueImage2,
+        thumbSrc: risqueImage2,
+        alt: '',
+      },
+      {
+        type: 'video',
+        src: '/assets/videos/projects/risque/video.mp4',
+        thumbSrc: risqueImage3,
+      },
     ],
     links: {
       liveDemo: 'https://www.risque.com.br/',
@@ -114,6 +161,17 @@ export const projects: Project[] = [
         src: infograficoANPImage,
         thumbSrc: infograficoANPImage,
         alt: '',
+      },
+      {
+        type: 'image',
+        src: infograficoANPImage2,
+        thumbSrc: infograficoANPImage2,
+        alt: '',
+      },
+      {
+        type: 'video',
+        src: '/assets/videos/projects/infografico/video.mp4',
+        thumbSrc: infograficoANPImage3,
       },
     ],
     links: {

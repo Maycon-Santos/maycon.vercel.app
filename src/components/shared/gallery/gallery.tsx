@@ -1,5 +1,6 @@
-import { useCallback, useMemo, useRef, useState } from 'react'
+import React, { useCallback, useMemo, useRef, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
+import Video from '@qier-player/react'
 import classNames from 'classnames'
 import styles from './gallery.module.css'
 
@@ -7,7 +8,7 @@ export type Media = {
   type: 'image' | 'video'
   src: StaticImageData | string
   thumbSrc?: StaticImageData | string
-  alt: string
+  alt?: string
 }
 
 export type GalleryProps = {
@@ -57,41 +58,68 @@ const Gallery: React.FC<GalleryProps> = (props) => {
           onScroll={handleScroll}
           ref={mediaCarouselRef}
         >
-          {medias.map(
-            ({ src, alt, type }) =>
-              type === 'image' && (
+          {medias.map(({ src, alt, type }, index) => {
+            const key = index
+
+            if (type === 'image') {
+              return (
                 <Image
-                  key={typeof src === 'string' ? src : src.src}
+                  key={key}
                   src={src}
                   className={styles['media-carousel-item']}
-                  alt={alt}
+                  alt={alt || ''}
                 />
-              ),
-          )}
+              )
+            }
+
+            if (type === 'video' && typeof src === 'string') {
+              return (
+                <Video
+                  key={key}
+                  options={{ src }}
+                  className={styles['media-carousel-item']}
+                />
+              )
+            }
+          })}
         </div>
       </div>
       {thumbs && (
         <div className={styles['thumb-list']}>
           {medias.map(
-            ({ thumbSrc, alt }, index) =>
+            ({ type, thumbSrc, alt }, index) =>
               thumbSrc && (
-                <Image
-                  key={typeof thumbSrc === 'string' ? thumbSrc : thumbSrc.src}
-                  src={thumbSrc}
+                <div
                   className={classNames(styles['thumb-item'], {
                     [styles.selected]: index === selectedItem,
                   })}
+                  key={index}
                   onClick={() => selectItem(index)}
-                  alt={alt}
-                />
+                >
+                  <Image
+                    src={thumbSrc}
+                    className={classNames(styles['thumb-image'])}
+                    alt={alt || ''}
+                  />
+                  {type === 'video' && (
+                    <i
+                      className={classNames(
+                        'symbol',
+                        styles['thumb-play-icon'],
+                      )}
+                    >
+                      play_circle
+                    </i>
+                  )}
+                </div>
               ),
           )}
         </div>
       )}
       <div className={styles['dot-list']}>
-        {medias.map(({ src }, index) => (
+        {medias.map((_, index) => (
           <button
-            key={typeof src === 'string' ? src : src.src}
+            key={index}
             onClick={() => selectItem(index)}
             className={classNames(styles['dot-item'], {
               [styles.selected]: index === selectedItem,

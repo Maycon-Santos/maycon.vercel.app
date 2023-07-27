@@ -276,6 +276,11 @@
     picocolors "^1.0.0"
     tslib "^2.5.0"
 
+"@qier-player/react@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/@qier-player/react/-/react-2.0.3.tgz#d1d195e100076f668b14f171b5be16ba5751cde1"
+  integrity sha512-f/HA8ymEu3KdC6kslf9vB0S7TjntjFh7aql+KgK+9Uyf0KHyMsQWdKBqIRIjmuFt97vUxhtxmxgsIIGHsSkxQg==
+
 "@rushstack/eslint-patch@^1.1.3":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.3.2.tgz#31b9c510d8cada9683549e1dbb4284cca5001faf"
@@ -2439,6 +2444,11 @@ punycode@^2.1.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
   integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
+
+qier-player@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/qier-player/-/qier-player-2.0.3.tgz#5328dd08c394b2c64c5548e13ed16db606a04163"
+  integrity sha512-r3kIy0eQrHm+cO6DIZBw2zbGDfEYXjLxNv4mRbrvJmBgDh8Pg2h3ZVaE/2YvJNFv+S5pPdlg0ZMry8l+xEvmqg==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
