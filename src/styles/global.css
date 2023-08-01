@@ -71,6 +71,7 @@ body {
   font-weight: var(--icon-weight-normal);
   color: var(--foreground-color);
   background: var(--background-color);
+  overflow-x: hidden;
 }
 
 i.symbol {
