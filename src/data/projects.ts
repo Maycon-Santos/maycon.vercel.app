@@ -54,7 +54,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        src: 'https://drive.google.com/uc?id=1GYQuk3ICwEFQ7b3NrN6_dsa0DaHdTLIT',
+        src: '/video/1GYQuk3ICwEFQ7b3NrN6_dsa0DaHdTLIT',
         thumbSrc: snakeGameImage3,
       },
     ],
@@ -84,7 +84,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        src: 'https://drive.google.com/uc?id=1Zu5kn4QLD6-0npRUuXlYW1diowfHbi9q',
+        src: '/video/1Zu5kn4QLD6-0npRUuXlYW1diowfHbi9q',
         thumbSrc: enevaImage3,
       },
     ],
@@ -113,7 +113,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        src: 'https://drive.google.com/uc?id=1gT49uLn5bz5hlTJNBiFdpzyB1x0J5USc',
+        src: '/video/1gT49uLn5bz5hlTJNBiFdpzyB1x0J5USc',
         thumbSrc: cortevaImage3,
       },
     ],
@@ -142,7 +142,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        src: 'https://drive.google.com/uc?id=1Oe_1a_tIwz4P9Z5WUzVqExSeLJNu_X-f',
+        src: '/video/1Oe_1a_tIwz4P9Z5WUzVqExSeLJNu_X-f',
         thumbSrc: risqueImage3,
       },
     ],
@@ -170,7 +170,7 @@ export const projects: Project[] = [
       },
       {
         type: 'video',
-        src: 'https://drive.google.com/uc?id=1VaSsCgZf318qYKb534dcBPXSeyYECyxU',
+        src: '/video/1VaSsCgZf318qYKb534dcBPXSeyYECyxU',
         thumbSrc: infograficoANPImage3,
       },
     ],
