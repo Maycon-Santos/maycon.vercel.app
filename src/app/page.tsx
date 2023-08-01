@@ -24,15 +24,18 @@ export default function Home() {
           </Section.Title>
         </Section.Header>
         <Section.Body>
-          Sou um desenvolvedor fullstack apaixonado por criar experiências
-          incríveis no frontend. Com foco em Next.js, React, TypeScript, React
-          Native e Git, construo aplicações web e mobile rápidas, escaláveis e
-          elegantes. Com sólidos conhecimentos em controle de versão e boas
-          práticas, entrego soluções de alta qualidade. Comprometido com
-          aprendizado contínuo e resolução de problemas, estou pronto para
-          transformar suas ideias em realidade e colaborar em projetos
-          desafiadores. Vamos trabalhar juntos para alcançar resultados
-          incríveis!
+          Olá, eu sou o Maycon Santos, um programador fullstack apaixonado por
+          criar interfaces gamificadas. Eu tenho experiência em desenvolver
+          telas responsivas e aplicações escaláveis com testes unitários usando
+          tecnologias como Node.js, Express, Adonis.js, React, React Native,
+          Nextjs entre outras. O que me diferencia como programador fullstack é
+          a minha proatividade para buscar e criar soluções que atendam às
+          necessidades dos meus clientes e parceiros. O meu objetivo é ser uma
+          liderança de um time que desenvolve projetos inovadores e de
+          qualidade. Você pode conhecer mais sobre o meu trabalho no meu perfil
+          do Linkedin ou entrar em contato comigo pelo meu e-mail. Estou sempre
+          disposto a aprender novas habilidades e acompanhar as principais
+          notícias do mundo da tecnologia.
         </Section.Body>
       </Section>
 
@@ -65,11 +68,15 @@ export default function Home() {
           </Section.Title>
         </Section.Header>
         <Section.Body>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the s standard dummy text ever since
-          the 1500s, when an unknown printer took a galley of type and scrambled
-          it to make a type specimen book. It has survived not only five
-          centuries, but also the leap into electronic
+          Uma das coisas que mais me ajudaram na minha carreira foi desenvolver
+          habilidades interpessoais, como comunicação e trabalho em equipe. Isso
+          me permitiu construir relacionamentos profissionais de confiança e
+          colaboração, além de aprender com diferentes perspectivas e
+          experiências. Também me tornei capaz de me adaptar a mudanças e lidar
+          com pressão, o que é essencial em um mercado dinâmico e competitivo.
+          Por fim, sou proativo para buscar e desenvolver soluções, sempre
+          buscando aprimorar meus conhecimentos e competências. Essas são as
+          qualidades que me diferenciam e me fazem crescer na minha carreira.
         </Section.Body>
       </Section>
 

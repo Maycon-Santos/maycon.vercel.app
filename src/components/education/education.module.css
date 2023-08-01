@@ -51,6 +51,12 @@
     & + .education-item {
       margin-top: var(--spacing-13);
     }
+
+    &:nth-child(2n + 2) {
+      .education-image-container {
+        align-self: auto;
+      }
+    }
   }
 }
 
