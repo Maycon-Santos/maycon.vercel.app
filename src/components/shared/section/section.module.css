@@ -68,11 +68,6 @@
 
 .title-fragment {
   font-weight: var(--font-weight-bold);
-  margin-right: var(--spacing-2);
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   &.style-fill {
     color: var(--section-title-color);

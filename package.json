@@ -27,6 +27,7 @@
   "devDependencies": {
     "@csstools/postcss-global-data": "^2.0.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "git-commit-msg-linter": "^5.0.4",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",

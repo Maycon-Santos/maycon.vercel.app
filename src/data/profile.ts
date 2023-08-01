@@ -1,7 +1,7 @@
-import emailIcon from '@/assets/images/social-icons/email.svg'
-import githubIcon from '@/assets/images/social-icons/github.svg'
-import linkedinIcon from '@/assets/images/social-icons/linkedin.svg'
-import whatsappIcon from '@/assets/images/social-icons/whatsapp.svg'
+import emailIcon from '@/assets/images/social-icons/email.png'
+import githubIcon from '@/assets/images/social-icons/github.png'
+import linkedinIcon from '@/assets/images/social-icons/linkedin.png'
+import whatsappIcon from '@/assets/images/social-icons/whatsapp.png'
 
 export { default as profileImage } from '@/assets/images/profile.jpg'
 export const profileName = 'Maycon Santos'

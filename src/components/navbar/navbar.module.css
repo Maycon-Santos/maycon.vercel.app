@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   margin-right: var(--spacing-2);
+  color: inherit;
 }
 
 .profile-image-container {

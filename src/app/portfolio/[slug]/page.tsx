@@ -32,7 +32,11 @@ const Portfolio: NextPage<PortfolioPageProps> = (props) => {
   return (
     <Layout>
       <div className={styles.wrapper}>
-        <button className={styles['back-button']} onClick={() => router.back()}>
+        <button
+          className={styles['back-button']}
+          onClick={() => router.back()}
+          aria-label="voltar"
+        >
           <i className="symbol">arrow_back</i>
         </button>
         <header className={styles.header}>

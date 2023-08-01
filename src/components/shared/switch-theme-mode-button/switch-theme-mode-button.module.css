@@ -7,7 +7,15 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background-color: var(--primary-color);
+  background: none;
+
+  &.light {
+    background-color: var(--primary-color);
+  }
+
+  &.dark {
+    background-color: var(--secondary-color);
+  }
 
   @media (--large-viewport) {
     width: 66px;
@@ -16,5 +24,15 @@
     & :global(i.symbol) {
       font-size: var(--icon-size-1);
     }
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+
+  @media (--large-viewport) {
+    width: 42px;
+    height: 42px;
   }
 }

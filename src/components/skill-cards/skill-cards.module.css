@@ -1,9 +1,19 @@
 .wrapper {
-  overflow-y: auto;
-  scroll-snap-type: x mandatory;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media (--large-viewport) {
     padding: 0 var(--section-horizontal-spacing);
   }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .card-list {
@@ -11,6 +21,7 @@
   --image-container-size: 90px;
 
   display: flex;
+  width: 100%;
   margin-top: calc(
     (var(--image-container-size) / 2) + var(--image-container-border-size)
   );
@@ -68,6 +79,12 @@
     &.ghost {
       display: block;
     }
+
+    &:nth-child(1n + 4) {
+      &:not(.visible) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -100,4 +117,15 @@
 .skill-description {
   margin-top: var(--spacing-2);
   text-align: center;
+}
+
+.see-all-button {
+  padding: var(--spacing-5) var(--spacing-7);
+  border-radius: 50px;
+  border: none;
+  margin-top: var(--spacing-5);
+  font-weight: var(--font-weight-bold);
+  color: var(--button-text-color);
+  cursor: pointer;
+  background-color: var(--primary-color);
 }

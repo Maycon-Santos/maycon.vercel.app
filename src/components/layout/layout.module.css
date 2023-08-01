@@ -34,3 +34,32 @@
     display: initial;
   }
 }
+
+.footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  padding: var(--spacing-6) var(--spacing-3);
+
+  &::before {
+    content: '';
+    display: block;
+    width: 480px;
+    height: 60px;
+    margin-top: var(--spacing-3);
+    transform: translateX(-25%);
+    background-image: url('/assets/images/wave-4.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (--medium-viewport) {
+    flex-direction: row;
+    padding: var(--spacing-6) var(--spacing-11);
+    align-items: center;
+
+    &::before {
+      margin-top: 0;
+    }
+  }
+}

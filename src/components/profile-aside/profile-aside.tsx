@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import classNames from 'classnames'
 import { profileImage, profileName, profileOffice } from '@/data/profile'
 import styles from './profile-aside.module.css'
@@ -26,16 +27,32 @@ const ProfileAside: React.FC<ProfileAsideProps> = (props) => {
         >
           <i className={classNames('symbol', styles['close-icon'])}>close</i>
         </button>
-        <div className={styles['profile-image-container']}>
+        <Link
+          href="/"
+          className={styles['profile-image-container']}
+          title="Ir para a home"
+        >
           <Image
             src={profileImage}
             className={styles['profile-image']}
             alt=""
           />
-        </div>
+        </Link>
         <div className={styles['profile-content']}>
-          <span className={styles['profile-name']}>{profileName}</span>
-          <span className={styles['profile-label']}>{profileOffice}</span>
+          <Link
+            href="/"
+            className={styles['profile-name']}
+            title="Ir para a home"
+          >
+            {profileName}
+          </Link>
+          <Link
+            href="/"
+            className={styles['profile-label']}
+            title="Ir para a home"
+          >
+            {profileOffice}
+          </Link>
           <ul className={styles['personal-info']}>
             <li className={styles['personal-info-row']}>
               <b>Idade:</b> 25
@@ -94,7 +111,11 @@ const ProfileAside: React.FC<ProfileAsideProps> = (props) => {
               </li>
             </ul>
           </div>
-          <a href="/" className={styles['download-cv-button']}>
+          <a
+            href="/curriculo.pdf"
+            download
+            className={styles['download-cv-button']}
+          >
             <i className={classNames('symbol', styles['download-cv-icon'])}>
               download
             </i>{' '}

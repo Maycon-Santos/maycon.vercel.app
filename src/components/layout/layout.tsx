@@ -17,7 +17,12 @@ const Layout: React.FC<PropsWithChildren> = (props) => {
           open={asideIsOpen}
           onClose={() => setAsideIsOpen(false)}
         />
-        <main className={styles.main}>{children}</main>
+        <main className={styles.main}>
+          {children}
+          <footer className={styles.footer}>
+            © 2023 Maycon Santos. All rights reserved.
+          </footer>
+        </main>
         <div className={styles.aside}>
           <div className={styles['switch-theme-mode-button-container']}>
             <SwitchThemeModeButton />

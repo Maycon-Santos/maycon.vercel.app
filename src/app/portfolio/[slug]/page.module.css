@@ -15,10 +15,12 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  color: var(--button-text-color);
   background-color: var(--primary-color);
 
   :global(i.symbol) {
     font-size: var(--icon-size-1);
+    font-weight: 600;
   }
 
   @media (--large-viewport) {

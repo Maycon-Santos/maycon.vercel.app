@@ -25,6 +25,7 @@ const SocialButtons: React.FC = () => {
       <button
         className={styles['see-more-button']}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={`${isOpen ? 'fechar' : 'abrir'} redes sociais`}
       >
         <i
           className={classNames('symbol', styles.icon, {

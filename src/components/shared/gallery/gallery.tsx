@@ -95,6 +95,7 @@ const Gallery: React.FC<GalleryProps> = (props) => {
                   })}
                   key={index}
                   onClick={() => selectItem(index)}
+                  aria-hidden="true"
                 >
                   <Image
                     src={thumbSrc}
@@ -124,6 +125,7 @@ const Gallery: React.FC<GalleryProps> = (props) => {
             className={classNames(styles['dot-item'], {
               [styles.selected]: index === selectedItem,
             })}
+            aria-label={`ir para imagem ${index + 1}`}
           />
         ))}
       </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import SwitchThemeModeButton from '@/components/shared/switch-theme-mode-button'
 import { profileImage, profileName, profileOffice } from '@/data/profile'
 import styles from './navbar.module.css'
@@ -12,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
   return (
     <nav className={styles.wrapper}>
-      <div className={styles['profile-container']}>
+      <Link href="/" className={styles['profile-container']}>
         <div className={styles['profile-image-container']}>
           <Image
             src={profileImage}
@@ -24,12 +25,13 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           <span className={styles['profile-name']}>{profileName}</span>
           <span className={styles['profile-label']}>{profileOffice}</span>
         </div>
-      </div>
+      </Link>
       <div className={styles['buttons-container']}>
         <SwitchThemeModeButton />
         <button
           className={styles['open-sidebar-button']}
           onClick={onOpenAside}
+          aria-label="visualizar perfil"
         />
       </div>
     </nav>

@@ -11,10 +11,10 @@ import React, {
 
 export type ThemeMode = 'dark' | 'light'
 
-type MatchFn = (matches: { [k in ThemeMode]: boolean | string | number }) => any
+type MatchFn = (matches: { [k in ThemeMode]: any }) => any
 
 type ThemeModeContextValue = {
-  themeMode: ThemeMode
+  themeMode?: ThemeMode
   match: MatchFn
   toggleThemeMode: () => void
 }
@@ -27,7 +27,33 @@ const ThemeModeContext = createContext<ThemeModeContextValue>({
 
 const ThemeModeProvider: React.FC<PropsWithChildren> = (props) => {
   const { children } = props
-  const [themeMode, setThemeMode] = useState<ThemeMode>('light')
+  const [themeMode, setThemeMode] = useState<ThemeMode | undefined>(() => {
+    const prefersDarkScheme = globalThis.matchMedia
+      ? globalThis.matchMedia('(prefers-color-scheme: dark)')
+      : null
+    const currentTheme = globalThis.localStorage
+      ? globalThis.localStorage.getItem('theme')
+      : undefined
+
+    if (currentTheme == 'dark') {
+      return 'dark'
+    }
+
+    if (currentTheme === 'light') {
+      return 'light'
+    }
+
+    if (prefersDarkScheme !== null) {
+      if (prefersDarkScheme) {
+        return 'dark'
+      }
+
+      if (prefersDarkScheme) {
+        return 'light'
+      }
+    }
+  })
+
   const match = useCallback<MatchFn>(
     (matches) =>
       Object.entries(matches).find(([key]) => key === themeMode)?.[1],
@@ -40,12 +66,14 @@ const ThemeModeProvider: React.FC<PropsWithChildren> = (props) => {
   }, [themeMode])
 
   useLayoutEffect(() => {
-    const [currentMode] = document.body.className.match(/\w+(-mode)/) || ['']
+    const [currentThemeMode] = document.body.className.match(/\w+(-mode)/) || [
+      'dark-mode',
+    ]
 
-    document.body.className = document.body.className.replace(
-      currentMode,
-      `${themeMode}-mode`,
-    )
+    if (themeMode) localStorage.setItem('theme', themeMode)
+
+    document.body.classList.remove(`${currentThemeMode}`)
+    document.body.classList.add(`${themeMode}-mode`)
   }, [themeMode])
 
   return (

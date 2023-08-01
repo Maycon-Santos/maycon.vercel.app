@@ -15,6 +15,7 @@ type SectionProps = {
 
 type SectionHeadingProps = PropsWithChildren<{
   align?: 'left' | 'center' | 'right'
+  className?: string
 }>
 
 type SectionTitleProps = {
@@ -50,9 +51,11 @@ const Section: SectionComponent = (props) => {
 }
 
 const SectionHeader: React.FC<SectionHeadingProps> = (props) => {
-  const { children, align = 'left' } = props
+  const { children, align = 'left', className } = props
   return (
-    <div className={classNames(styles.header, styles[`align-${align}`])}>
+    <div
+      className={classNames(styles.header, styles[`align-${align}`], className)}
+    >
       {children}
     </div>
   )
@@ -86,6 +89,7 @@ const SectionTitle: React.FC<SectionTitleProps> = (props) => {
                 styles[`text-transform-${fragmentTextTransform}`],
               )}
             >
+              {index > 0 && <>&nbsp;</>}
               {fragment}
             </span>
           )

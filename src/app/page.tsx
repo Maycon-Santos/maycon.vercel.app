@@ -6,6 +6,7 @@ import Education from '@/components/education'
 import PortfolioCards from '@/components/portfolio-cards'
 import Experiences from '@/components/experiences'
 import Layout from '@/components/layout'
+import SocialLinks from '@/components/social-links'
 import { awards, experiences } from '@/data/experiences'
 import { projects } from '@/data/projects'
 import styles from './page.module.css'
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <Layout>
       <Section>
-        <Section.Header>
+        <Section.Header className={styles['section-header-main']}>
           <Section.Title fragmentSizes={['large']} fragmentStyles={['outline']}>
             Olá,
           </Section.Title>
@@ -36,7 +37,10 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Section.Header align="right">
+        <Section.Header
+          className={styles['section-header-skills']}
+          align="right"
+        >
           <Section.Title
             fragmentSizes={['medium', 'large']}
             fragmentStyles={['fill', 'outline']}
@@ -70,7 +74,7 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Section.Header>
+        <Section.Header className={styles['section-header-education']}>
           <Section.Title
             fragmentSizes={['md-large']}
             fragmentStyles={['outline']}
@@ -87,7 +91,10 @@ export default function Home() {
       <hr className={styles.separator} />
 
       <Section>
-        <Section.Header align="right">
+        <Section.Header
+          className={styles['section-header-portfolio']}
+          align="right"
+        >
           <Section.Title
             fragmentSizes={['medium', 'md-large']}
             fragmentStyles={['fill', 'outline']}
@@ -102,7 +109,10 @@ export default function Home() {
       </Section>
 
       <Section>
-        <Section.Header align="center">
+        <Section.Header
+          className={styles['section-header-experiences']}
+          align="center"
+        >
           <Section.Title
             fragmentSizes={['medium']}
             fragmentStyles={['fill']}
@@ -123,8 +133,12 @@ export default function Home() {
         </Section.Body>
       </Section>
 
+      <div className={styles['separator-2']}>
+        <hr />
+      </div>
+
       <Section>
-        <Section.Header>
+        <Section.Header className={styles['section-header-award']}>
           <Section.Title
             fragmentSizes={['sm-large']}
             fragmentStyles={['outline']}
@@ -135,6 +149,17 @@ export default function Home() {
         </Section.Header>
         <Section.Body>
           <Experiences items={awards} titleSize="small" descriptionFullWidth />
+        </Section.Body>
+      </Section>
+
+      <Section>
+        <Section.Header>
+          <Section.Title fragmentSizes={['medium']}>
+            Onde me encontrar:
+          </Section.Title>
+        </Section.Header>
+        <Section.Body>
+          <SocialLinks />
         </Section.Body>
       </Section>
     </Layout>
