@@ -80,8 +80,8 @@
       display: block;
     }
 
-    &:nth-child(1n + 4) {
-      &:not(.visible) {
+    &:nth-child(1n + 5) {
+      &:not(.visible)&:not(.ghost) {
         display: none;
       }
     }

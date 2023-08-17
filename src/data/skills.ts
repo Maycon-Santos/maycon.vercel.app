@@ -13,6 +13,7 @@ import postgresqlLogoImage from '@/assets/images/skills/postgresql.svg'
 import mongoDBLogoImage from '@/assets/images/skills/mongodb.svg'
 import angularLogoImage from '@/assets/images/skills/angular.svg'
 import vueLogoImage from '@/assets/images/skills/vue.svg'
+import dockerLogoImage from '@/assets/images/skills/docker.svg'
 
 export const skills = [
   {
@@ -27,6 +28,19 @@ export const skills = [
       'TypeScript é uma linguagem de programação de código aberto que adiciona verificação de tipos ao JavaScript. Com ela, é possível escrever código mais seguro e escalável, com detecção de erros em tempo de compilação. É amplamente utilizado em projetos JavaScript de grande escala para desenvolvimento confiável e eficiente.',
     logoImage: typescriptLogoImage,
   },
+
+  {
+    name: 'Go',
+    description:
+      'Go, também conhecida como Golang, é uma linguagem de programação eficiente e concorrente. Projetada pelo Google, ela combina a simplicidade de sintaxe com recursos avançados, como coleta de lixo automática e concorrência nativa. É amplamente usada para desenvolvimento de sistemas de rede, serviços web e aplicativos de alta performance.',
+    logoImage: goLang,
+  },
+  {
+    name: 'Next.js',
+    description:
+      'Next.js é um framework que permite a construção de aplicativos web modernos e escaláveis. Ele combina as vantagens do React com recursos como renderização do lado do servidor, roteamento avançado e otimizações de desempenho. Com Next.js, é fácil criar aplicativos rápidos, com boa experiência do usuário e fácil manutenção.',
+    logoImage: nextLogoImage,
+  },
   {
     name: 'Node.js',
     description:
@@ -34,10 +48,10 @@ export const skills = [
     logoImage: nodeLogoImage,
   },
   {
-    name: 'Next.js',
+    name: 'Docker',
     description:
-      'Next.js é um framework que permite a construção de aplicativos web modernos e escaláveis. Ele combina as vantagens do React com recursos como renderização do lado do servidor, roteamento avançado e otimizações de desempenho. Com Next.js, é fácil criar aplicativos rápidos, com boa experiência do usuário e fácil manutenção.',
-    logoImage: nextLogoImage,
+      'O Docker é uma plataforma de virtualização de contêineres que permite empacotar, distribuir e executar aplicativos e suas dependências de forma isolada. Isso simplifica o desenvolvimento e implantação, garantindo consistência entre diferentes ambientes.',
+    logoImage: dockerLogoImage,
   },
   {
     name: 'React Native',
@@ -74,12 +88,6 @@ export const skills = [
     description:
       'O Git é um sistema de controle de versão amplamente utilizado. Ele permite que você acompanhe e registre alterações em arquivos, colabore com outros desenvolvedores e reverta alterações indesejadas. É eficiente, flexível e essencial para o desenvolvimento de software moderno.',
     logoImage: gitLogoImage,
-  },
-  {
-    name: 'Go',
-    description:
-      'Go, também conhecida como Golang, é uma linguagem de programação eficiente e concorrente. Projetada pelo Google, ela combina a simplicidade de sintaxe com recursos avançados, como coleta de lixo automática e concorrência nativa. É amplamente usada para desenvolvimento de sistemas de rede, serviços web e aplicativos de alta performance.',
-    logoImage: goLang,
   },
   {
     name: 'Python',

@@ -24,18 +24,18 @@ export default function Home() {
           </Section.Title>
         </Section.Header>
         <Section.Body>
-          Olá, eu sou o Maycon Santos, um programador fullstack apaixonado por
-          criar interfaces gamificadas. Eu tenho experiência em desenvolver
-          telas responsivas e aplicações escaláveis com testes unitários usando
-          tecnologias como Node.js, Express, Adonis.js, React, React Native,
-          Nextjs entre outras. O que me diferencia como programador fullstack é
-          a minha proatividade para buscar e criar soluções que atendam às
-          necessidades dos meus clientes e parceiros. O meu objetivo é ser uma
-          liderança de um time que desenvolve projetos inovadores e de
-          qualidade. Você pode conhecer mais sobre o meu trabalho no meu perfil
-          do Linkedin ou entrar em contato comigo pelo meu e-mail. Estou sempre
-          disposto a aprender novas habilidades e acompanhar as principais
-          notícias do mundo da tecnologia.
+          Olá, eu sou o Maycon Santos, um programador fullstack. Eu tenho
+          experiência em desenvolver telas responsivas e aplicações escaláveis
+          com testes unitários usando tecnologias como Go, Node.js, Express,
+          Adonis.js, React, React Native, Nextjs entre outras. O que me
+          diferencia como programador fullstack é a minha proatividade para
+          buscar e criar soluções que atendam às necessidades dos meus clientes
+          e parceiros. O meu objetivo é ser uma liderança de um time que
+          desenvolve projetos inovadores e de qualidade. Você pode conhecer mais
+          sobre o meu trabalho no meu perfil do Linkedin ou entrar em contato
+          comigo pelo meu e-mail. Estou sempre disposto a aprender novas
+          habilidades e acompanhar as principais notícias do mundo da
+          tecnologia.
         </Section.Body>
       </Section>
 
