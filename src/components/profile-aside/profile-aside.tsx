@@ -112,7 +112,7 @@ const ProfileAside: React.FC<ProfileAsideProps> = (props) => {
             </ul>
           </div>
           <a
-            href="/curriculo.pdf"
+            href="/curriculo-maycon-santos.pdf"
             download
             className={styles['download-cv-button']}
           >
