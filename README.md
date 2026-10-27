@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# maycon.vercel.app
 
-## Getting Started
+Site pessoal de Maycon Pereira dos Santos, Engenheiro de Software Full Stack. O visual é uma área de trabalho no estilo do macOS, com janelas, terminal e Dock. As decisões de design estão em [`DESIGN.md`](DESIGN.md).
 
-First, run the development server:
+## Stack
+
+- Next.js 16 (App Router, geração estática) com TypeScript
+- CSS próprio em `src/app/globals.css`, sem framework de estilo
+- Fontes Geist e Geist Mono pelo pacote `geist` (servidas pelo próprio site)
+
+## Rotas
+
+| Rota | Conteúdo |
+|---|---|
+| `/` | Mesa em português |
+| `/en` | Mesa em inglês |
+| `/curriculo` | Texto do currículo em HTML, com link para o PDF |
+| `/sitemap.xml`, `/robots.txt` | Gerados por `src/app/sitemap.ts` e `src/app/robots.ts` |
+
+## Onde editar
+
+- **Textos:** `src/content/pt.ts` e `src/content/en.ts`
+- **Currículo em HTML:** `src/content/resume.ts` (sem telefone). O PDF fica em `public/curriculo-maycon-pereira-dos-santos.pdf`.
+- **Vídeos e pôsteres dos projetos:** `public/projects/`
+- **Logos das empresas:** `public/logos/`
+- **Imagens de compartilhamento:** `src/app/(pt)/opengraph-image.png` e `src/app/(en)/en/opengraph-image.png`
+
+## Comandos
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm install
+npm run dev    # http://localhost:3000
+npm run lint
+npm run build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
