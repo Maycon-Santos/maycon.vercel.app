@@ -15,6 +15,10 @@ export const stackLines = [
 
 export const media = {
   snake: { video: "/projects/cobrinha.mp4", poster: "/projects/cobrinha.jpg" },
+  journey: { video: "/projects/jornada.mp4", poster: "/projects/jornada.jpg" },
+  quiz: { video: "/projects/quiz.mp4", poster: "/projects/quiz.jpg" },
+  polish: { video: "/projects/esmaltes.mp4", poster: "/projects/esmaltes.jpg" },
+  sanitation: { video: "/projects/saneamento.mp4", poster: "/projects/saneamento.jpg" },
 };
 
 export const snakeRepo = "https://github.com/Maycon-Santos/snake-game";
