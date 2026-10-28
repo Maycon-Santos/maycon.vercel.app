@@ -9,12 +9,12 @@ A fonte de verdade dos fatos de carreira é o `AGENTS.md` do repositório `Mayco
 |---|---|
 | Nome de exibição | Maycon Pereira dos Santos |
 | Idiomas | Português do Brasil e inglês |
-| Currículo para baixar | PDF da versão ATS, **com** telefone. A versão em inglês do site aponta para o mesmo PDF em português. |
+| Currículo para baixar | PDF da versão ATS, **sem** telefone (desde 28/10/2026). A versão em inglês do site aponta para o mesmo PDF em português. |
 | Domínio | `maycon.vercel.app` |
-| Projetos | Jogo da Cobrinha e os projetos da agência: jornada 2D, quiz para TV touchscreen, simulador de esmaltes e infográfico de saneamento |
+| Projetos | Só o Jogo da Cobrinha (desde 28/10/2026). Os projetos interativos da agência saíram, como pede o `AGENTS.md` do `curriculo`. |
 | Clientes da agência | Os projetos aparecem **sem o nome do cliente** no texto e no SEO. Os vídeos podem mostrar a marca. |
 | Enquadramento dos projetos | Os projetos são trabalhos anteriores às ferramentas de IA para programação. A ideia é mostrar conhecimento técnico de base, não competir com projetos atuais. O texto diz isso como fato, sem se desculpar. Fica como subtítulo na barra de título da janela Projetos: "feitos antes das ferramentas de IA para programação". |
-| Busca de vagas | **O site não diz que o Maycon está aberto a vagas** (decisão de 27/10/2026, para não chegar à gerência atual). A janela Sobre não tem selo de disponibilidade. **Exceção pedida pelo Maycon:** o terminal mantém `echo $DISPONIBILIDADE` → "Vagas remotas ou híbridas em São Paulo" (o Maycon foi avisado de que a linha é pública e indexável). |
+| Busca de vagas | **O site não diz que o Maycon está aberto a vagas** (decisão de 27/10/2026, para não chegar à gerência atual). A janela Sobre não tem selo de disponibilidade. Desde 28/10/2026 não há exceção: a linha `echo $DISPONIBILIDADE` saiu do terminal. Nenhum texto, metadado, terminal ou imagem de compartilhamento pode falar em disponibilidade. |
 | Contato | E-mail, LinkedIn e GitHub. Sem WhatsApp, endereço, data de nascimento nem CPF. |
 | Tema | Segue o sistema de quem visita (claro ou escuro) |
 | Foto | Sem foto por enquanto. Os avatares do site antigo têm só 125 px. |
@@ -129,7 +129,7 @@ Amostra: https://claude.ai/artifact/8rxuqS2mJyMPZPC9SBXPUe
 
 - **Computador:** abrem Sobre, Experiência, Projetos e Terminal. Contato e Currículo abrem pela barra de menus, pelo Dock ou pelos ícones da mesa.
 - **Celular:** Sobre → Experiência → Projetos → Terminal → Contato, empilhadas na rolagem.
-- **Densidade:** Experiência com até 4 tópicos por empresa, mais as tags de tecnologia. A stack aparece no terminal (`cat stack.txt`) e nas tags; não há janela Stack.
+- **Densidade:** Experiência com até 4 tópicos por empresa, mais as tags de tecnologia. **Mudou em 28/10/2026:** a janela mostra todos os tópicos do currículo ATS, para o site ficar igual a ele. A stack aparece no terminal (`cat stack.txt`) e nas tags; não há janela Stack.
 - **Variações recusadas:** enxuta (Projetos em destaque, 2 tópicos por empresa) e com janela Stack.
 
 ### 2.5 Componentes de detalhe: Lista e Finder
@@ -174,5 +174,18 @@ Página de revisão: https://claude.ai/artifact/3Dqx7tqn3ra9hK1RpBPK18
 - **Rotas:** `/` (pt-BR), `/en` (en), `/curriculo`, `/sitemap.xml`, `/robots.txt` e uma página 404 global (`global-not-found.tsx`). Cada idioma tem o próprio layout raiz, para o `<html lang>` correto.
 - **Janelas:** a posição inicial vem do CSS (frações da mesa), então a página não muda de lugar ao carregar (sem CLS). O JavaScript só entra para arrastar, redimensionar, abrir, fechar, minimizar e ampliar.
 - **Vídeos:** os trechos de 14 s da amostra, carregados só quando o visualizador abre (`preload="metadata"`, sem autoplay com movimento reduzido).
-- **PDF do currículo:** gerado a partir do `curriculo-ats.html` (com telefone), em A4, com 4 páginas.
+- **PDF do currículo:** gerado a partir do `curriculo-ats.html`, em A4, com 4 páginas. Na recriação tinha telefone; desde 28/10/2026 sai sem telefone.
 - **Imagens de compartilhamento:** capturas da própria mesa com a janela Sobre, em 1200 × 630 px.
+
+## Atualização de conteúdo (28/10/2026)
+
+O currículo e o LinkedIn foram revisados no repositório `curriculo` (PR #6). O site passou a seguir o `curriculo-ats.html` da `main`, sem mudar layout, componentes nem estrutura.
+
+- **Fonte de verdade:** `curriculo-ats.html`, `linkedin.txt` e `AGENTS.md` da `main` do `curriculo`. Os textos em português são cópia exata do currículo; o inglês traduz com o mesmo sentido.
+- **Privacidade:** PDF novo sem telefone; a linha de disponibilidade saiu do terminal.
+- **SEO:** a descrição não liga os 7 anos às tecnologias: "Engenheiro de Software Full Stack com mais de 7 anos de experiência. Trabalho com TypeScript, Node.js, React, Next.js e React Native em produtos de esports, pagamentos e viagens." (sugestão do Maycon, 178 caracteres).
+- **Cargos:** "Desenvolvedor" nas experiências, com o modelo de trabalho ao lado da cidade. "Engenheiro de Software Full Stack" fica só no título do site, no resumo e na descrição.
+- **Codezone:** dois cargos, o efetivado (out/2018 – set/2019) e o estágio (mai/2018 – out/2018), cada um com uma entrada na lista da Experiência.
+- **Paag:** o tópico principal segue o currículo ("unificou a interface de 4 produtos em 2 repositórios e acelerou as entregas").
+- **Projetos:** os quatro projetos da agência saíram; ficou o Jogo da Cobrinha.
+- **Decisões tomadas sem resposta explícita do Maycon** (ele aprovou abrir o PR sem responder às quatro perguntas; cada uma pode ser revertida): tirar os projetos da agência, mostrar todos os tópicos, usar o texto do currículo na Paag e usar a descrição sugerida por ele.
